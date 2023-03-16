@@ -46,19 +46,4 @@ public class UsersController {
         return ResponseEntity.ok().body(res);
     }
 
-    @ExceptionHandler(InvalidRequestException.class)
-    public ResponseEntity<?> handleIllegalArgument(InvalidRequestException e) {
-        return ResponseEntity.badRequest().body(e.getMessage());
-    }
-
-    @ExceptionHandler(NullPointerException.class)
-    public ResponseEntity<?> handleIllegalArgument(NullPointerException e) {
-        return ResponseEntity.badRequest().body(e.getMessage());
-    }
-
-    @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity<?> handleIllegalArgument(UserNotFoundException e) {
-        return ResponseEntity.badRequest().body(e.getMessage());
-    }
-
 }
